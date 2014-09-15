@@ -1,0 +1,23 @@
+{% extends "main/index.html" %}
+
+{% block title %}Ajout de {{ type }} - {% endblock %}
+
+{% block content %}
+
+	{% if hasWorked %}
+	<div class="alert alert-success" role="alert"><strong>:)</strong> Votre morceau a bien été ajouté à la playlist {{ type }} !</div>
+	{% endif %}
+	
+	<div class="col-xs-12 col-md-6">
+		
+		<div class="page-header">
+			<h1 class="type-title">Ajout de {{ type }}</h1>
+		</div>
+	</div>
+
+	<form action="{% url "main.views.addSong" type %}" method="post">{% csrf_token %}
+	{{ form.as_ul }}
+	<input type="submit" value="Submit" />
+	</form>
+
+{% endblock %}

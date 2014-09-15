@@ -1,0 +1,45 @@
+{% extends "main/index.html" %}
+
+{% block title %}{{ type }} - {% endblock %}
+
+{% block content %}
+	<div class="col-xs-12 col-md-6">
+		
+		<div class="page-header">
+			<h1 class="type-title">{{ type }}</h1>
+		</div>
+		<a class="btn btn-primary btn-lg" href="{% url 'main.views.addSong' type %} "><span class="glyphicon glyphicon-plus"></span></a>
+
+	</div>
+	
+	<div class="col-xs-12 col-md-6">
+		
+		{% block song %}
+		{% if song %}
+			<iframe class="video" src="//www.youtube.com/embed/{{ song }}" frameborder="0" allowfullscreen></iframe>
+		{% endif %}
+		{% endblock %}	
+	
+	</div>
+	
+	<div class="col-xs-12 col-md-12 page-header">
+		<h3>Tous les morceaux</h3>
+	</div>
+	
+	<table class="table">
+		<tr>
+			<th></th>
+			<th>Artiste</th>
+			<th>Titre</th>
+			<th>ID YouTube</th>
+		</tr>
+		{% for song in songs %}
+			<tr>
+				<td><a class="btn glyphicon glyphicon-play" href="{% url 'main.views.typeSong' type song.adress %}"/>
+				<td>{{ song.artist }}</td>
+				<td>{{ song.name }}</td>
+				<td>{{ song.adress }}</td>
+			</tr>
+		{% endfor %}
+	</table>
+{% endblock %}
