@@ -8,6 +8,5 @@ iniparse==0.4
 psycopg2==2.5.4
 pycups==1.9.65
 pycurl==7.19.3
-rpm-python==4.11.2
 virtualenv==1.11.6
 wsgiref==0.1.2
