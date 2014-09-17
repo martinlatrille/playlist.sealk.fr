@@ -1,1 +1,1 @@
-web: gunicorn wsgi.py --log-file -
+web: sh -c "cd playlist && gunicorn wsgi.py --log-file -"
