@@ -52,7 +52,7 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'playlist.urls'
 
-WSGI_APPLICATION = 'playlist.wsgi.main'
+WSGI_APPLICATION = 'playlist.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
