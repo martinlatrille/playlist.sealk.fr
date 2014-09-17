@@ -82,17 +82,15 @@ APPEND_SLASH = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
-import os
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/assets/'
 
 STATICFILES_DIRS = (
-	os.path.join(BASE_DIR, '/assets'),
+	os.path.join(BASE_DIR, '../assets'),
 )
 
 # Templates
 
 TEMPLATE_DIRS = (
-	os.path.join(BASE_DIR, '/templates'),
+	os.path.join(BASE_DIR, '../templates'),
 )
