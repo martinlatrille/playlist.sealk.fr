@@ -5,7 +5,7 @@
  */
 
 body {
-    margin-top: 50px; /* Required margin for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    //margin-top: 50px; /* Required margin for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
 /* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
@@ -28,4 +28,11 @@ body {
 	width: 260px;
 	padding-top: 6px;
 	background-color: #191919;
+}
+
+.playnav li {
+	font-size: 15px;
+	margin: 0px;
+	margin-top: 10px;
+	padding: 0px;
 }

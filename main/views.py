@@ -34,7 +34,10 @@ def addSong(request, type):
 			name = form.cleaned_data['name']
 			artist = form.cleaned_data['artist']
 			adress = form.cleaned_data['adress']
-			form.save()
+			song = form.save(commit=False)
+			song.type = TypePlaylist.objects.all().get(type="Trap")
+			song.save()
+			
 			
 	else:
 		form = AddSongForm()

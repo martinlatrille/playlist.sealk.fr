@@ -44,7 +44,6 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
@@ -85,11 +84,11 @@ APPEND_SLASH = True
 STATIC_URL = '/assets/'
 
 STATICFILES_DIRS = (
-	"C:\\Users\\Martin\\Projets\\Python\\playlist_sealk_fr\\playlist\\assets\\",
+	"/home/sealk/projs/playlist.sealk.fr/assets/",
 )
 
 # Bonus Config
 
 TEMPLATE_DIRS = (
-	"C:\\Users\\Martin\\Projets\\Python\\playlist_sealk_fr\\playlist\\templates\\",
+	"/home/sealk/projs/playlist.sealk.fr/templates/",
 )
