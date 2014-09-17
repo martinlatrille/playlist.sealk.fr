@@ -52,7 +52,7 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'playlist.urls'
 
-WSGI_APPLICATION = 'playlist.wsgi.application'
+WSGI_APPLICATION = 'playlist.wsgi.main'
 
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
@@ -91,7 +91,7 @@ STATICFILES_DIRS = (
 	os.path.join(BASE_DIR, '../assets'),
 )
 
-# Bonus Config
+# Templates
 
 TEMPLATE_DIRS = (
 	os.path.join(BASE_DIR, '../templates'),
