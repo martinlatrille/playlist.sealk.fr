@@ -1,1 +1,1 @@
-web: gunicorn playlist/wsgi.py --log-file - 
+web: gunicorn playlist.wsgi:application --log-file - 
