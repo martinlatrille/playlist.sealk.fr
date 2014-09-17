@@ -29,8 +29,6 @@ TEMPLATE_DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
-
-
 # Application definition
 
 INSTALLED_APPS = (
@@ -40,7 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-	'main',
+		'main',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -55,7 +53,6 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'playlist.urls'
 
 WSGI_APPLICATION = 'playlist.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
@@ -97,5 +94,5 @@ STATICFILES_DIRS = (
 # Bonus Config
 
 TEMPLATE_DIRS = (
-	"/home/sealk/projs/playlist/playlist.sealk.fr/templates/",
+	os.path.join(BASE_DIR, '../templates'),
 )
