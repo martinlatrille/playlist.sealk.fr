@@ -8,6 +8,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/dev/ref/settings/
 """
 
+#Honor the 'X-Forwarded-Proto' header for request.is_secure()
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -24,7 +27,8 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [*]
+
 
 
 # Application definition
@@ -81,14 +85,17 @@ APPEND_SLASH = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/assets/'
 
 STATICFILES_DIRS = (
-	"/home/sealk/projs/playlist.sealk.fr/assets/",
+    os.path.join(BASE_DIR, 'assets'),
 )
 
 # Bonus Config
 
 TEMPLATE_DIRS = (
-	"/home/sealk/projs/playlist.sealk.fr/templates/",
+	"/home/sealk/projs/playlist/playlist.sealk.fr/templates/",
 )
